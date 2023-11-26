@@ -1,0 +1,72 @@
+<div class="lds-dual-ring"></div>
+<span id="fun">FUN FACT</span>
+<style>
+    span {
+        font-size: 32px;
+        font-family: "Consolas";
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .lds-dual-ring {
+        position: fixed;
+        left: 675px;
+        top: 275px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+    }
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 175%;
+        border: 16px solid #000000;
+        border-color: #000000 transparent #000000 transparent;
+        animation: lds-dual-ring 2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+</style>
+<script>
+    const funFacts = [
+        "Did you know that honey never spoils?",
+        "Octopuses have three hearts!",
+        "The Eiffel Tower can be 15 cm taller during the summer due to thermal expansion.",
+        "A group of flamingos is called a 'flamboyance'.",
+        "Beaver anal secretions known as castoreum have been used as a vanilla flavor substitute for certain foods and luxury cosmetics.",
+        "Venus is the only planet in our solar system that rotates clockwise.",
+        "The fear of vegetables is called lachanophobia.",
+        'The longest English word in common usage is "antidisestablishmentarianism", with 28 letters.',
+        "Sneezing can travel up to 100 miles per hour and produces around 40,000 droplets.",
+        "The average person spends six months waiting for red lights to turn green during their lifetime.",
+        "The human nose can remember up to 50,000 different scents.",
+        "A group of pugs is called a grumble.",
+        "Cows have best friends and can become stressed when separated from them."
+    ];
+    function displayFunFact() {
+        const funFactElement = document.getElementById("fun");
+        const randomIndex = Math.floor(Math.random() * funFacts.length);
+        funFactElement.textContent = "Fun Fact: " + funFacts[randomIndex];
+    }
+    function randdis() {
+        displayFunFact();
+        setTimeout(randdis, 2750);
+    }
+    randdis();
+    let close = true;
+    let page = "https://kayyraa.github.io/nnn.com"
+    if (close == true) {
+        setTimeout(() => {
+            window.location.href = page;
+        }, Math.floor(Math.random() * 5500) + 2500);
+    }
+</script>
